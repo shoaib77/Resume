@@ -1,0 +1,208 @@
+%-------------------------
+% Resume in Latex
+% Author : Pawan Kumar
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{ #2 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\EducationFormat}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} \hspace{0.5cm} \textit{\small#3} \textit{\small #4} & #2
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Shoaib Ansari}} & Email : \href{mailto:shoaib2work@gmail.com}{shoaib2work@gmail.com}\\
+  \href{https://github.com/shoaib77}{\textcolor{blue}{GitHub}} \href{https://www.linkedin.com/in/shoaib14530/}{\textcolor{blue}{Linkedin}} & Mobile : +91 6309077625  \\
+\end{tabular*}
+\vspace{-15pt}
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Fractal \big| AI@Scale \big| EdgeAI Team | Pune, India}{}
+      {\hspace{0.3cm}Edge and IoT Engineer, L2}{\big| Nov 2021 - Present}
+      \resumeItemListStart
+        \resumeItem{Missed Scan Detection -}
+          {Co-Developed infrastructure and provisioned data to automate the DeepStream pipeline.} 
+      \resumeItemListEnd
+    \resumeSubheading
+      {Microsoft \big| OneDrive and SharePoint | Hyderabad, India}{}
+      {\hspace{0.7cm}Software Engineer}{\big| Dec 2019 - Dec 2021}
+      \resumeItemListStart
+        \resumeItem{WorkFlow Manager -}
+          {Co-Developed a framework which helps managing and running multiple unit of idempotent tasks with dependencies in distributed environment and implemented retry mechanism for failure cases, this is used for all tenants (\textasciitilde 5 Million).} 
+        \resumeItem{Taxonomy replication -}
+          {Implemented replication job which helps replicating Taxonomy from one Geo to another Geo to keep Taxonomy data eventually consistent, used by most of the S500 Tenants.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+    {Microsoft \big| Deliver Team | Hyderabad, India}{}
+    {\hspace{2.8cm} Software Engineer}{\big| July 2019 - Dec 2019}
+      \resumeItemListStart
+        \resumeItem{Role based access control -}
+          {Implemented mechanism to authorize different services with different level of permissions to fetch the respective data from SQL database.}
+        \resumeItem{Web-API for master data of Product -}
+        {Implemented this API which removed rudimentary methods of relying on visual inspection of the product, this service needed high availability because it contains critical data and every other service uses it as source of truth.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+    {Microsoft \big| PowerApps \big| Analytics Team | Hyderabad, India}{}
+    {Software Engineer}{\big| July 2018 - July 2019}
+      \resumeItemListStart
+        \resumeItem{Feature-Gating -}
+          {Implemented feature-gating with caching, this helped us to rollout a new feature to specific tenant/user first, this Api was hit by \textasciitilde2 Million requests per day.}
+        \resumeItem{Purge Job -}
+        {Implemented SQL table purge job for GDPR compliance,We could not save user’s personal details(PII) in SQL for long time due to
+        GDPR violation.This job will purge the user’s PII data or stale data after specific time period in distributed environment.}
+        \resumeItem{Recovery Framework -}
+        {Co-Developed Recovery framework which is used to recover terabytes of analytics data and it re-runs the failed Jobs after processing the logs generated by the original Jobs.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \item\small{
+      \textbf{Languages}{: C\#, C++, T-SQL, PowerShell, Python}
+      \hfill
+      \textbf{OO Design}{: Solid principles, Design patterns}
+      \vspace{-5pt}
+    }
+    \item\small
+    {
+      \textbf{Tools}{: VScode, Visual Studio, Git, Github, Kusto, Microsoft SQL Server}
+      \vspace{-5pt}
+    }
+    \item\small
+    {
+      \textbf{Technologies}{: Microsoft Azure cloud services, Docker, Azure DevOps}
+      \vspace{-5pt}
+    }
+    \item\small
+    {
+      \textbf{Certification}{: Programming in C\# \big| Score - 885/1000 \big| ExamCode - 70-483}
+      \vspace{-5pt}
+    }
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \EducationFormat
+    {University of Pune \big| Army Institute of Technology}{Pune, India}
+    {Bachelor of Engineering in Information Technology; First class with disctinction}{July 2014 -- June 2018
+    }
+    \vspace{-4pt}
+    \EducationFormat
+    {Higher Secondary Education}{Punjab, India}
+    {Kendriya Vidyalaya; Aggregate: 92.4\% }{April 2013 -- March 2014
+    } 
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Undergraduate Project}
+\resumeSubHeadingListStart
+  \EducationFormat
+  {Breast Cancer detection \big| Mammograph - based
+  Convolutional Neural Network \big| Deep Learning}{}
+  {My team Implemented CNN with extreme learning techniques for diagnosing breast cancer with  \textbf{accuracy of 82\%.}}
+  {}
+  \vspace{-4pt}
+  \EducationFormat
+  {Cryptocurrency arbitrage trading strategy between different crypto exchanges}{}
+  {Implemented algorithm for trading crypto on different exchanges to take advantage
+  of price difference and generate profit.}
+  {}
+
+\resumeSubHeadingListEnd
+%-----------Award and Achievements-----------------
+\section{Awards and Achievements}
+\resumeSubHeadingListStart
+\resumeSubItem{}{Represented my college in ACM ICPC 2016 \big| Nationally.}{}
+\resumeSubItem{}{Ranked under Top 50 among 11000 participants in Contest held by
+Computer society of India.}
+\resumeSubItem{}{National chess player (Under- 17) Represented Jammu region.}
+\resumeSubItem{}{Secured 1st rank 7 times, 2nd and 3rd Rank several times in algorithmic
+contests held in different colleges.}
+\resumeSubItem{}{100 percentile in Quantitative aptitude and 99.6 percentile in
+Computer Programming in AMCAT exam \big| Nationally.}
+\resumeSubItem{}{Solved 1000+ Algorithmic problems on different online Judges.}
+\resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
